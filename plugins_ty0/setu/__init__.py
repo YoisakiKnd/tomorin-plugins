@@ -10,11 +10,11 @@ def _setu(event: Event):
 
 
 def apisetu():
-    url = 'https://iw233.cn/api.php?sort=random'
+    url = 'https://iw233.cn/api.php?sort=random' #API来源(iw233.cn)
     response = requests.post(url)
     return response.content
 
-def save_image():
+def save_image(): #获取图片并返回
     image_data = apisetu()
     with open('image.jpg', 'wb') as f:
         f.write(image_data)

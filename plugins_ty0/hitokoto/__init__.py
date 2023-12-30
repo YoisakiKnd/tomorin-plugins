@@ -12,6 +12,6 @@ def _hitokoto(event: Event):
 
 
 def msg():
-   response = requests.get("https://v1.hitokoto.cn")
+   response = requests.get("https://v1.hitokoto.cn") #通过一言api获取一言
    hitokoto = response.json()["hitokoto"]
-   return hitokoto
+   return hitokoto #返回一言信息

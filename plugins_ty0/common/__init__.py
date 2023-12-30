@@ -2,7 +2,7 @@ from core import on, Event
 from plugins.h import h
 
 
-@on.guild_member_added
+@on.guild_member_added #检测用户加群
 def gm_add(event: Event):
     event.message_create(content=f'{h.at(event.user.id)} 欢迎新用户加入本群！')
 
@@ -13,7 +13,7 @@ def gm_add(event: Event):
 def _zao(event: Event):
     if event.message.content == 'salt早':
         if event.user.name != '':
-            name_ = '，' + event.user.name
+            name_ = '，' + event.user.name #获取用户名称ID
         else:
             name_ = ''
         event.message_create(content=f'早安{name_}!')
