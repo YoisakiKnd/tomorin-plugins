@@ -1,0 +1,7 @@
+
+pillow
+random
+psutil
+requests
+bs4
+json
